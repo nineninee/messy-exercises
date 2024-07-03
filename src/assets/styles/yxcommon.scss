@@ -1,0 +1,198 @@
+/**实心按钮*/
+.buttonSolid {
+  padding: 9px 25px 9px 25px;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 120px;
+  height: 38px;
+  background: #efdb5e;
+  border-radius: 19px;
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 20px;
+  border: 2px solid #efdb5e;
+}
+
+.buttonSolid:hover {
+  background-color: #e5d154;
+  border: 2px solid #e5d154;
+}
+
+/**空心按钮*/
+.buttonHollow {
+  padding: 7px 25px 7px 25px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 20px;
+  width: 120px;
+  height: 38px;
+  border-radius: 19px;
+  border: 2px solid #999999;
+}
+
+.buttonHollow:hover {
+  background-color: #f6f4f5;
+}
+
+/**详情页相关*/
+/*****详情页标题样式**/
+.detailTitle {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  line-height: 35px;
+  text-align: right;
+}
+
+/*****详情页值样式**/
+.detailValue {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  line-height: 35px;
+}
+
+/**横线**/
+.xLine {
+  height: 1px;
+  background: #e4e4e4;
+}
+
+a {
+  color: #efdb5e;
+}
+
+/**table表格组件样式*/
+.tableArea {
+  border-radius: 6px;
+}
+
+/**页面底色定义**/
+.pageDiv {
+  /* width: 100%;
+    min-height: 110%;
+    margin: -8px -16px; */
+  /* background: #F5F5F5; */
+}
+
+/**页面操作区域**/
+.pageOperArea {
+  margin: 0 30px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+/**下载模版按钮**/
+.downloadTemplateButton {
+  display: inline-block;
+  padding: 5px 21px 5px 21px;
+  width: 122px;
+  height: 34px;
+  border-radius: 19px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 19px;
+}
+
+.height30 {
+  height: 30px;
+}
+
+.height25 {
+  height: 25px;
+}
+
+.height20 {
+  height: 20px;
+}
+
+.height15 {
+  height: 15px;
+}
+
+.height10 {
+  height: 10px;
+}
+
+.height5 {
+  height: 5px;
+}
+
+.pageArea {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.commonBorder {
+  border: 1px solid #0066ff;
+}
+
+/**保存按钮*/
+.buttonSave {
+  padding: 9px 25px 9px 25px;
+  cursor: pointer;
+  margin: 0 auto;
+  width: 120px;
+  height: 38px;
+  background: #efdb5e;
+  border-radius: 19px;
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 20px;
+}
+
+.buttonSave.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/**详情页面头部样式*/
+.headerTitleArea {
+  display: flex;
+  align-items: center;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    width: 6px;
+    height: 14px;
+    background: #efdb5e;
+    border-radius: 3px;
+    margin-right: 11px;
+  }
+
+  .text {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    color: #222;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}

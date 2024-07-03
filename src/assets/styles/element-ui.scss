@@ -1,0 +1,168 @@
+// cover some element-ui styles
+.el-upload__input {
+  display: none;
+}
+
+.cell {
+  .el-tag {
+    margin-right: 0px;
+  }
+}
+
+// table 里面操作按钮样式覆盖
+.el-table__cell .cell {
+  .el-button.is-text {
+    padding: 8px 5px;
+  }
+}
+
+.status-col {
+  .cell {
+    padding: 0 10px;
+    text-align: center;
+
+    .el-tag {
+      margin-right: 0px;
+    }
+  }
+}
+// fix 2.2.0 版本label标签不居中
+// .el-form-item--small .el-form-item__label {
+//   line-height: 32px !important;
+// }
+
+// element ui 移动端组件适配
+.el-icon {
+  vertical-align: middle;
+}
+
+.el-header {
+  --el-header-padding: 0 0px !important;
+  // --el-header-height: 50px !important;
+}
+// el 2.2.0 text button
+.el-button.is-text {
+  color: var(--el-color-primary) !important;
+}
+@media screen and (max-width: 500px) {
+  .el-message {
+    min-width: 300px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .el-message-box {
+    width: 300px !important;
+  }
+
+  .el-pagination__jump {
+    display: none !important;
+  }
+
+  .el-pagination__sizes {
+    display: none !important;
+  }
+}
+
+// dialog
+@media screen and (max-width: 700px) {
+  .el-dialog {
+    --el-dialog-width: 100% !important;
+    --el-dialog-margin-top: 0 !important;
+  }
+  .el-dialog:not(.is-fullscreen) {
+    margin-top: 0 !important;
+  }
+  .el-drawer {
+    width: 85% !important;
+  }
+}
+
+/** 表格更多操作下拉样式 */
+.el-table .el-dropdown-link {
+  cursor: pointer;
+  color: #409eff;
+  margin-left: 5px;
+}
+
+.el-table .el-dropdown,
+.el-icon-arrow-down {
+  font-size: 12px;
+}
+
+//适配完毕
+
+// 隐藏picture-card 上传按钮
+.hide .el-upload--picture-card {
+  display: none;
+}
+
+// 禁止菜单选中
+.el-sub-menu .el-sub-menu__title span,
+.el-menu .el-menu-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// fix 侧边栏二级导航缩小图标消失问题
+.el-sub-menu__title {
+  padding-right: unset !important;
+}
+.el-dialog {
+  border-radius: 10px !important;
+}
+.el-dialog__header {
+  margin-right: 0 !important;
+  min-height: 58px;
+  border-bottom: 1px solid #eee;
+}
+.el-dialog__footer {
+  display: flex;
+  padding: 20px !important;
+  justify-content: center;
+  border-top: 1px solid #eee;
+}
+.el-dialog__footer .el-button--default {
+  border: 1px solid #dcdfe6 !important;
+}
+.el-dialog__footer .el-button {
+  border: 1px solid #dcdfe6 !important;
+}
+.el-dialog__footer .el-button--primary {
+  border: none !important;
+}
+.el-input.is-disabled .el-input__inner {
+  cursor: text !important;
+}
+.el-select .el-input.is-disabled .el-input__wrapper {
+  cursor: text !important;
+}
+.el-input.is-disabled {
+  cursor: text !important;
+}
+.el-textarea.is-disabled .el-textarea__inner {
+  cursor: text !important;
+}
+.el-message-box__btns {
+  display: flex;
+  justify-content: center !important;
+}
+.el-avatar > img {
+  width: 100%;
+}
+.el-tree-node__content:hover {
+  overflow-x: auto;
+  /* 整个滚动条 */
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 5px;
+  }
+
+  /* 滚动条上的滚动滑块 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #dcdddf;
+  }
+}

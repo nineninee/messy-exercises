@@ -1,0 +1,13 @@
+:deep(.el-dialog__body) {
+  padding: 20px;
+}
+
+:deep(.el-select) {
+  width: 200px;
+}
+
+:deep(.pagination-container) {
+  .el-select {
+    width: 100px;
+  }
+}
