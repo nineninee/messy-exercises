@@ -1,5 +1,5 @@
 /**
- * 卡码网0094.城市间货物运输I
+ * 卡码网0094.城市间货物运输I-SPFA
  */
 
 const rl = require("readline").createInterface({ input: process.stdin });
@@ -10,20 +10,29 @@ let N // N个城市
 let M // M条边
 let grid = [] // 存储边
 let minDist = [] // 存储最短距离
+let isInQueue = [] // 存储是否在队列中
+let queue = [] // 队列
 
+class Edge {
+  constructor(to, val) {
+    this.to = to;
+    this.val = val;
+  }
+}
 
 const init = async () => {
   let line
   line = await readline();
   [N, M] = line.split(' ').map(Number);
 
-  grid = new Array(M).fill(0).map(() => new Array(3).fill(0))
+  grid = new Array(N + 1).fill(0).map(() => new Array())
   minDist = new Array(N + 1).fill(Infinity)
+  isInQueue = new Array(N + 1).fill(false)
 
   for (let i = 0; i < M; i++) {
     line = await readline()
     let [u, v, w] = line.split(' ').map(Number)
-    grid.push([u, v, w])
+    grid[u].push(new Edge(v, w))
   }
 }
 
@@ -34,14 +43,24 @@ void (async function () {
   let end = N
   minDist[start] = 0
 
-  for (let i = 1; i < N; i++) {
-    for (const slide of grid) {
-      let from = slide[0]
-      let to = slide[1]
-      let price = slide[2]
+  queue.push(start)
+  isInQueue[start] = true
 
-      if (minDist[from] != Infinity && minDist[to] > minDist[from] + price) {
-        minDist[to] = minDist[from] + price
+  while (queue.length) {
+    let node = queue.shift()
+    isInQueue[node] = false
+
+    for (const edge of grid[node]) {
+      let from = node
+      let to = edge.to
+      let val = edge.val
+
+      if (minDist[to] > minDist[from] + val) {
+        minDist[to] = minDist[from] + val
+        if (isInQueue[to] == false) {
+          queue.push(to)
+          isInQueue[to] = true
+        }
       }
     }
   }
