@@ -1,0 +1,20 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch node",
+      "console": "integratedTerminal",
+      //这里是可以选择使用哪个控制台来调试，
+      //推荐使用上面这个
+      //“integratedConsole”不可以进行输入，当遇到readline函数或者是readline.on函数时将无法输入
+      "sourceMaps": true, //可以将压缩文件的代码映射回到源代码
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}\\src\\kamacoder\\test2.js"
+    }
+  ]
+}
