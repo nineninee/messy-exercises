@@ -4,6 +4,7 @@
   "description": "ZRAdmin.NET管理系统",
   "author": "ZR",
   "license": "MIT",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build:prod": "vite build",
