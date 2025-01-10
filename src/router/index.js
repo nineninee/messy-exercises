@@ -21,13 +21,13 @@ import Layout from '@/layout/index.vue'
   }
  */
 
-  // 默认路由，所有用户都可以访问
+// 默认路由，所有用户都可以访问
 const DEFAULT_ROUTE = [
   {
     path: '/',
     name: 'home',
     component: Layout,
-    meta: {menuName: '首页'},
+    meta: { menuName: '首页' },
     children: [
       {
         path: '',
@@ -52,7 +52,7 @@ export const constantRoutes = [
   {
     path: '',
     component: Layout,
-    // redirect: '/index',
+    redirect: '/index',
     children: [
       {
         path: '/index',
@@ -107,75 +107,59 @@ export const constantRoutes = [
     ]
     // component: () => import('@/views/hilightMenu/index'),
   },
-  // {
-  //   path: '/redirect',
-  //   component: Layout,
-  //   hidden: true,
-  //   children: [
-  //     {
-  //       path: '/redirect/:path(.*)',
-  //       component: () => import('@/views/redirect/index.vue')
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/login',
-  //   component: () => import('@/views/login2'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/ddLogin',
-  //   component: () => import('@/views/ddLogin'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/sociallogin',
-  //   component: () => import('@/views/socialLogin'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/register',
-  //   component: () => import('@/views/register'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/:pathMatch(.*)*',
-  //   component: () => import('@/views/error/404'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/401',
-  //   component: () => import('@/views/error/401'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/user',
-  //   component: Layout,
-  //   hidden: true,
-  //   redirect: 'noredirect',
-  //   children: [
-  //     {
-  //       path: 'profile',
-  //       component: () => import('@/views/system/user/profile/index'),
-  //       name: 'Profile',
-  //       meta: { title: '个人中心', icon: 'user', titleKey: 'menu.personalCenter' }
-  //     }
-  //   ]
-  // }
-  // 不用可删掉
-  // {
-  //   path: '',
-  //   component: Layout,
-  //   hidden: false,
-  //   meta: { title: '组件示例', icon: 'icon', noCache: 'fasle' },
-  //   children: [
-  //     {
-  //       path: 'icon',
-  //       component: () => import('@/views/components/icons/index'),
-  //       name: 'icon',
-  //       meta: { title: '图标icon', icon: 'icon1', noCache: 'fasle', titleKey: 'menu.icon' }
-  //     }]
-  // },
+  {
+    path: '/fixedHeightVirtualList',
+    name: 'fixedHeightVirtualList',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/fixedHeightVirtualList/index'),
+      },
+    ]
+  },
+  {
+    path: '/unFixedHeightVirtualList',
+    name: 'unFixedHeightVirtualList',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/unFixedHeightVirtualList/index'),
+      },
+    ]
+  },
+  {
+    path: '/redirect',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '/redirect/:path(.*)',
+        component: () => import('@/views/redirect/index.vue')
+      }
+    ]
+  },
+  {
+    path: '/login',
+    component: () => import('@/views/login2'),
+    hidden: true
+  },
+  {
+    path: '/register',
+    component: () => import('@/views/register'),
+    hidden: true
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('@/views/error/404'),
+    hidden: true
+  },
+  {
+    path: '/401',
+    component: () => import('@/views/error/401'),
+    hidden: true
+  },
 ]
 
 const router = createRouter({

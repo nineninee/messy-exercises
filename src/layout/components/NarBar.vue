@@ -37,6 +37,18 @@
       <el-menu-item index="/storePersist/pinia" class="menu">pinia</el-menu-item>
       <el-menu-item index="/storePersist/vuex" class="menu">vuex</el-menu-item>
     </el-sub-menu>
+
+    <el-sub-menu index="/fixedHeightVirtualList" class="menu">
+      <template #title>
+        <span>定高虚拟列表</span>
+      </template>
+    </el-sub-menu>
+
+    <el-sub-menu index="/unFixedHeightVirtualList" class="menu">
+      <template #title>
+        <span>不定高虚拟列表</span>
+      </template>
+    </el-sub-menu>
   </el-menu>
 </template>
 
@@ -53,11 +65,9 @@ const handleSelect = (key, keyPath) => {
 };
 
 const handleOpen = (key, keyPath) => {
-  // console.log(key, keyPath);
   proxy.$router.push(key);
 };
 const handleClose = (key, keyPath) => {
-  // console.log(key, keyPath);
 };
 
 defineExpose({

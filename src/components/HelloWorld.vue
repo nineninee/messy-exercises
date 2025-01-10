@@ -5,7 +5,6 @@
 </template>
 
 <script setup HelloWorld>
-import { defineProps, ref } from 'vue';
 const props = defineProps({
   msg: String
 });
